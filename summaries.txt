@@ -1,0 +1,168 @@
+[1] "loc"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   1.00   10.00   20.00   32.82   37.00  715.00 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   1.00   22.00   45.00   80.43   93.00 3442.00 
+[1] "======================"
+[1] "v(g)"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  1.000   1.000   3.000   5.018   6.000 165.000 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    1.0     3.0     6.0    11.9    12.0   470.0 
+[1] "======================"
+[1] "ev(g)"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  1.000   1.000   1.000   2.827   3.000 165.000 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  1.000   1.000   1.000   5.793   6.000 140.000 
+[1] "======================"
+[1] "iv(g)"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  1.000   1.000   2.000   3.189   4.000 147.000 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  1.000   2.000   3.000   7.391   7.000 402.000 
+[1] "======================"
+[1] "n"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00   13.00   43.00   89.46  100.00 3072.00 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    0.0    27.0    96.0   218.4   232.0  8441.0 
+[1] "======================"
+[1] "v"
+[1] "Summary without bugs"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+    0.00    44.97   188.00   494.30   505.40 20000.00 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    0.0   105.5   485.5  1423.0  1311.0 80840.0 
+[1] "======================"
+[1] "l"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.0000  0.0400  0.0900  0.1483  0.1900  1.3000 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+0.00000 0.02000 0.05000 0.08133 0.10000 1.00000 
+[1] "======================"
+[1] "d"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00    3.00    8.43   12.63   17.00  418.20 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   5.055  13.930  20.650  28.310 408.700 
+[1] "======================"
+[1] "i"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00   11.31   20.44   26.19   33.56  567.50 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00   15.52   30.59   42.99   52.60  569.80 
+[1] "======================"
+[1] "e"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+      0     145    1635   18540    8249 8256000 
+[1] "Summary with bugs"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+       0      631     6427   113300    38910 31080000 
+[1] "======================"
+[1] "b"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.0000  0.0100  0.0600  0.1649  0.1700  6.6700 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.0000  0.0400  0.1600  0.4748  0.4400 26.9500 
+[1] "======================"
+[1] "t"
+[1] "Summary without bugs"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+     0.0      8.1     90.8   1030.0    458.3 458700.0 
+[1] "Summary with bugs"
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+      0.0      35.1     357.1    6292.0    2162.0 1727000.0 
+[1] "======================"
+[1] "lOCode"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00    3.00   11.00   20.54   24.00  656.00 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00    7.00   23.00   50.11   55.00 2824.00 
+[1] "======================"
+[1] "lOComment"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   0.000   0.000   2.028   1.000 162.000 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   0.000   0.000   5.705   6.000 344.000 
+[1] "======================"
+[1] "lOBlank"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   0.000   2.000   3.652   4.000 219.000 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   1.000   4.000   8.688  10.000 447.000 
+[1] "======================"
+[1] "LocCodeAndComment"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.0000  0.0000  0.0000  0.2607  0.0000 42.0000 
+[1] "Summary with bugs"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+  0.0000   0.0000   0.0000   0.8312   0.0000 108.0000 
+[1] "======================"
+[1] "uniq_Op"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    0.0     5.0    10.0    10.4    15.0    99.0 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00    7.00   14.00   14.44   20.00  411.00 
+[1] "======================"
+[1] "uniq_Opnd"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00    4.00   10.00   13.99   18.00  264.00 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    0.0     7.0    18.0    28.3    34.0  1026.0 
+[1] "======================"
+[1] "total_Op"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00    8.00   26.00   53.21   59.00 2154.00 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    0.0    15.5    56.0   130.3   139.0  5420.0 
+[1] "======================"
+[1] "total_Opnd"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00    5.00   17.00   36.38   40.00 1378.00 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00   10.00   38.00   88.17   94.00 3021.00 
+[1] "======================"
+[1] "branchCount"
+[1] "Summary without bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  1.000   1.000   5.000   8.828  11.000 329.000 
+[1] "Summary with bugs"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   1.00    5.00   11.00   21.58   23.00  826.00 
+[1] "======================"
