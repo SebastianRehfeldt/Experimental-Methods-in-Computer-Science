@@ -5,11 +5,10 @@ withBugs = subset(processedData,defects==1)
 
 for(i in 1:(ncol(processedData)-1)){
 
-    
-  paste("Summary for ",toString(header[i])," and no bugs", sep="")
+  print(header[i])  
+  print("Summary without bugs")
   print(summary(withoutBugs[,i]))
-  
-  paste("Summary for ",toString(header[i])," with bugs", sep="")
+  print("Summary with bugs")
   print(summary(withBugs[,i]))
 
   print("======================")
