@@ -43,4 +43,5 @@ for (i in 1:nrow(halsteadData)) {
 halsteadData <- cbind(halsteadData,incompleteRow)
 #removes 10880 - 9512 = 1332 rows
 halsteadData <- subset(halsteadData,incompleteRow==0)
+halsteadData <- halsteadData[,1:22]
 nrow(processedData) - nrow(halsteadData)
