@@ -11,10 +11,12 @@ allColumns <- c("loc", "v(g)", "ev(g)", "iv(g)", "n", "v", "l", "d", "i", "e", "
 results = data.frame(nrow=length(allColumns), ncol=2)
 colnames(results) = c("Column", "ROC")
 
+shuffled <- processedData[sample(nrow(processedData)),]
+
 count = 0;
 for (str in allColumns) {
   count = count + 1
-  data = processedData[c(str, "defects")]
+  data = shuffled[c(str, "defects")]
   data = data[order(data[, str]),]
   #data = processedData
   train <- data[1:8000,]
@@ -38,7 +40,7 @@ for (str in allColumns) {
   auc <- performance(pr, measure = "auc")
   auc <- auc@y.values[[1]]
 
-  results[count,] = c(str, auc)
+  results[count,] = c(str, round(auc, digits = 3))
   
 }
 
