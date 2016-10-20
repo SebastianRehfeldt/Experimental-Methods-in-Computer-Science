@@ -1,3 +1,5 @@
+library(xtable)
+
 dataWithoutBugs = subset(processedData, defects == 0)
 dataWithBugs = subset(processedData, defects == 1)
 
