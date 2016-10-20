@@ -10,9 +10,9 @@ library(xtable)
 allColumns <- c("loc", "v(g)", "ev(g)", "iv(g)", "n", "v", "l", "d", "i", "e", "b", "t", "lOCode", "lOComment", "lOBlank", "LocCodeAndComment", "uniq_Op", "uniq_Opnd", "total_Op", "total_Opnd", "branchCount")
 
 # Create a data frame for results
-s_results <- matrix(0, ncol = 2, nrow = 0)
+s_results <- matrix(0, ncol = 3, nrow = 0)
 s_results <- data.frame(s_results)
-colnames(s_results) = c("AUC", "AIC")
+colnames(s_results) = c("METRIC", "AUC", "AIC")
 
 # Shuffle the data
 shuffled <- processedData[sample(nrow(processedData)),]
@@ -48,13 +48,14 @@ for (str in allColumns) {
   auc <- auc@y.values[[1]]
   aic = model$aic
 
-  s_results[str,] = c(round(auc, digits = 3), round(aic, digits = 0))
+  s_results[count,] = c(str, round(auc, digits = 3), round(aic, digits = 0))
 }
 
 # Sort and print the results
 res = s_results[order(s_results$AIC),]
 print(res)
 
-latexTable = xtable(res, caption = "AUC and AIC values for different metrices", digits=c(0,3,0))
-print(latexTable)
+# Print table for AIC values
+# latexTable = xtable(res[2], caption = "AUC and AIC values for different metrices", digits=c(0,0))
+# print(latexTable)
 
