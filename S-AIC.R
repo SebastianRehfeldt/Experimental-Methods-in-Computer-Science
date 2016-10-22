@@ -1,5 +1,6 @@
 # Used as guide:
 # https://www.r-bloggers.com/how-to-perform-a-logistic-regression-in-r/
+# This script calculates AIC values from single metrices
 
 # Load libraries
 library(pscl)
@@ -14,8 +15,7 @@ s_results <- matrix(0, ncol = 2, nrow = 0)
 s_results <- data.frame(s_results)
 colnames(s_results) = c("METRIC", "AIC")
 
-# Shuffle the data
-shuffled <- halsteadData[sample(nrow(halsteadData)),]
+shuffled <- halsteadData
 
 count = 0;
 # Calculate logistic regression for every single metric against defects
