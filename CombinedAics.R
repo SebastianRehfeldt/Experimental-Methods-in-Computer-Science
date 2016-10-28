@@ -4,7 +4,9 @@
 # The previous step is executed again and again until all metrices are in the list
 
 # Data to use
-data = halsteadData
+usedData = halsteadData
+
+level = 9
 
 # Column names without 'defects'
 allColumns <- c("loc", "v(g)", "ev(g)", "iv(g)", "n", "v", "l", "d", "i", "e", "b", "t", "lOCode", "lOComment", "lOBlank", "LocCodeAndComment", "uniq_Op", "uniq_Opnd", "total_Op", "total_Opnd", "branchCount")
@@ -20,23 +22,24 @@ columns = c();
 aics = c();
 
 # This for-loop searches first the best single metric, and then the best group of two, three, four and so on
-for (level in 1:columnCount) {
+for (level in 1:level) {
   smallestVal = 99999
   smallest = c(0)
   for (i in 1:columnCount) {
     # Don't calculate values for already used metric
     if (!i %in% variables) {
       
-      # Create matrix of data before calculating
-      tmp = matrix(0, ncol = level, nrow = length(data[,1]))
-      tmp[,1] = data[,allColumns[i]]
+      usedColumns = c();
       if (length(variables) > 0) {
         for (x in 1:length(variables)) {
-          tmp[,x+1]= data[,allColumns[variables[x]]]
+          usedColumns[x]= allColumns[variables[x]]
         }    
       }
       
-      model <- glm(data$defects ~ tmp ,family=binomial(link='logit'))
+      usedColumns[length(usedColumns)+1] = allColumns[i]
+      usedColumns[length(usedColumns)+1] = "defects"
+      
+      model <- glm(defects ~ .,family=binomial(link='logit'), data=usedData[usedColumns])
       aic = model$aic
       
       # Save values if they are smaller than previous ones
@@ -50,7 +53,18 @@ for (level in 1:columnCount) {
   variables[level] = smallest
   columns[level] = allColumns[smallest]
   aics[level] = smallestVal
-  plot(aics)
 }
 
+plot(aics, main="AIC values by metric count", xlab="Amount of used metrices", xtics=1:10)
 
+# Create a data frame for results
+results <- matrix(0, ncol = 2, nrow = level)
+results <- data.frame(results)
+colnames(results) = c("AIC", "Model")
+
+results[,1] = aics
+results[,2] = columns
+
+bestCombinedAic = variables
+
+print(variables)

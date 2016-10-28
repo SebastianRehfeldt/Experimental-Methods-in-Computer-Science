@@ -21,30 +21,3 @@ rm(temp)
 #processed data
 processedData <- na.omit(mydata) #removes lines with NaN
 cor(processedData)
-
-#remove lines with missing halstead values
-halsteadData <- processedData
-incompleteRow <- vector(length=nrow(halsteadData))
-
-for (i in 1:nrow(halsteadData)) {
-  numberOfConsecutiveZeros = 0
-  for(j in 1:ncol(processedData)){
-    if(processedData[i,j]==0){
-      numberOfConsecutiveZeros = numberOfConsecutiveZeros +1
-    }
-  }
-  if(numberOfConsecutiveZeros<16){
-    incompleteRow[i] <- 0
-  }
-  else{
-    incompleteRow[i] <- 1
-  }
-}
-halsteadData <- cbind(halsteadData,incompleteRow)
-#removes 10880 - 9512 = 1332 rows
-halsteadData <- subset(halsteadData,incompleteRow==0)
-halsteadData <- halsteadData[,1:22]
-nrow(processedData) - nrow(halsteadData)
-
-
-
