@@ -29,9 +29,29 @@ aic_values = results[order(results$AIC),]
 print("")
 print(aic_values)
 
-# Print table for AIC values
-# latexTable = xtable(res[2], caption = "AUC and AIC values for different metrices", digits=c(0,0))
-# print(latexTable)
+
+
+
+
+usedData <- HalsteadDataShuffledLog
+
+count = 0;
+# Calculate logistic regression for every single metric against defects
+for (str in allMetricNames) {
+  print(paste("Calculating", count+1, "/", length(allMetricNames), ", ", str))
+  count = count + 1
+  data = usedData[c(str, "defects")]
+  
+  model <- glm(data$defects ~data[,str],family=binomial(link='logit'))
+  aic = model$aic
+  results[count,] = c(str, round(aic, digits = 1))
+}
+
+# Sort and print the results
+log_aic_values = results[order(results$AIC),]
+print("")
+print(log_aic_values)
+
 
 
 

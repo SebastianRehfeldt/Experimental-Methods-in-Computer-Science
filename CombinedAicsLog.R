@@ -4,7 +4,7 @@
 # The previous step is executed again and again until all metrices are in the list
 
 # Data to use
-usedData = halsteadData
+usedData = HalsteadDataShuffledLog
 
 # Column names without 'defects'
 allColumns <- c("loc", "v(g)", "ev(g)", "iv(g)", "n", "v", "l", "d", "i", "e", "b", "t", "lOCode", "lOComment", "lOBlank", "LocCodeAndComment", "uniq_Op", "uniq_Opnd", "total_Op", "total_Opnd", "branchCount")

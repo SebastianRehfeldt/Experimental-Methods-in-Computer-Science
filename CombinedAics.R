@@ -4,9 +4,9 @@
 # The previous step is executed again and again until all metrices are in the list
 
 # Data to use
-usedData = halsteadData
+usedData = HalsteadDataShuffledLog
 
-level = 9
+level = 21
 
 # Column names without 'defects'
 allColumns <- c("loc", "v(g)", "ev(g)", "iv(g)", "n", "v", "l", "d", "i", "e", "b", "t", "lOCode", "lOComment", "lOBlank", "LocCodeAndComment", "uniq_Op", "uniq_Opnd", "total_Op", "total_Opnd", "branchCount")
@@ -55,7 +55,7 @@ for (level in 1:level) {
   aics[level] = smallestVal
 }
 
-plot(aics, main="AIC values by metric count", xlab="Amount of used metrices", xtics=1:10)
+plot(aics, main="AIC values from logarithmic data", xlab="Amount of used metrices", ylab="AIC value", xtics=1:10)
 
 # Create a data frame for results
 results <- matrix(0, ncol = 2, nrow = level)

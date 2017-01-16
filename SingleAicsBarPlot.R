@@ -1,7 +1,6 @@
 # This script needs the result of SingleAics to work correctly
 require(plotrix)
 
-switch = "log"
 switch = "org"
 
 if (switch == "org") {

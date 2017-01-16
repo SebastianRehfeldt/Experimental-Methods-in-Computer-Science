@@ -1,6 +1,7 @@
+# For calculating the last for loop in parallel with 20 threads
 library(foreach)
 library(doMC)
-registerDoMC(3) 
+registerDoMC(20) 
 
 # This script calculates AIC values of models with multiple metrices
 # It starts by searching the metric with the best AIC value
@@ -116,8 +117,8 @@ for (i in 1:columnCount) {
           smallest_3_log <<- c(i,j,k)
         }  
       }
-      
-      foreach(l=k:columnCount,.combine=cbind) %dopar% {
+      for (l in k:columnCount) {
+        
         if(i < j && j < k && k < l) {
           print(paste(i,j, k, l))
           usedColumns = c(allColumns[i], allColumns[j], allColumns[k], allColumns[l]);
@@ -141,7 +142,8 @@ for (i in 1:columnCount) {
             smallest_4_log <<- c(i,j,k,l)
           }     
         }
-        for (m in l:columnCount) {
+        
+        foreach(m=l:columnCount,.combine=cbind) %dopar% {
           if(i < j && j < k && k < l && l < m) {
             print(paste(i,j, k, l,m))
             usedColumns = c(allColumns[i], allColumns[j], allColumns[k], allColumns[l], allColumns[m]);
